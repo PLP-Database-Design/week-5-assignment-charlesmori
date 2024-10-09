@@ -30,31 +30,31 @@ db.connect((err) => {
 })
 
 
-// //Question 1
-// app.get('', (req, res) => {
-//     const getPatients = "SELECT patient_id, first_name, last_name, date_of_birth FROM patients"
-//     db.query(getPatients, (err, data) => {
-//         if(err) {
-//             return res.status(400).send("Failed to get patients", err)
-//         }
-//         res.status(200).send(data)
-//     })
-// });
+//Question 1
+app.get('', (req, res) => {
+    const getPatients = "SELECT patient_id, first_name, last_name, date_of_birth FROM patients"
+    db.query(getPatients, (err, data) => {
+        if(err) {
+            return res.status(400).send("Failed to get patients", err)
+        }
+        res.status(200).send(data)
+    })
+});
 
 
-// //Question 2
-// app.get('', (req, res) => {
-//     const getProvider = "SELECT first_name, last_name, provider_specialty FROM providers"
-//     db.query(getProvider, (err, data) =>{
+//Question 2
+app.get('', (req, res) => {
+    const getProvider = "SELECT first_name, last_name, provider_specialty FROM providers"
+    db.query(getProvider, (err, data) =>{
         
-//         //checking if there is an error
-//         if(err) {
-//             return res.status(400).send("Failde to get provider's info", err)
-//         }
+        //checking if there is an error
+        if(err) {
+            return res.status(400).send("Failde to get provider's info", err)
+        }
 
-//         res.status(200).send(data)
-//     })
-// })
+        res.status(200).send(data)
+    })
+})
 
 
 //Question 3
